@@ -40,11 +40,24 @@ The workflow of this project was executed using a combination of bioinformatics 
 ![Insert Image of your AlphaFold 3D model here](https://github.com/abdulaziz-khaled/Structural-Modeling-and-Allosteric-Site-Identification-of-Thyroid-Peroxidase-TPO-/blob/main/120649A081B0F2E6.png)
 
 
-### 4. Protein Preparation & Minimization
-* **Tool:** Schrödinger Suite (Protein Preparation Wizard)
-* **Action:** The raw AlphaFold model was prepared by assigning bond orders, adding missing hydrogens, optimizing the hydrogen bond network, and performing restrained energy minimization to ensure a stereochemically stable structure.
+## 4. Protein Preparation & Refinement
+**Tools:**
+* **Schrödinger Suite** (Protein Preparation Wizard)
+* **MOE - Molecular Operating Environment** (Structure Preparation & Protonate 3D)
 
-### 5. Binding Site Identification (SiteMap)
+**Action:**
+The AlphaFold-generated model of TPO was subjected to a rigorous refinement protocol to resolve initial structural inconsistencies. Preliminary preparation was conducted using **Schrödinger’s Protein Preparation Wizard** to assign bond orders and optimize the H-bond network. To ensure physiological relevance, the model was migrated to **MOE** for **Protonate 3D** analysis (pH 7.0, 300K). A final **Energy Minimization** was performed using the **Amber14:EHT Force Field** with an RMS gradient of 0.1 kcal/mol/Å². This process successfully eliminated atomic clashes and corrected hybridization errors, stabilizing the protein for downstream analysis.
+
+## 5. Structural Validation Outcomes
+To ensure the reliability of the refined TPO model, multiple validation servers were utilized via the **SAVES v6.0** platform. The outcomes confirmed a high-quality, stereochemically stable structure:
+
+* **Verify3D:** Successfully improved from **78.46% (Fail)** to **80.26% (Pass)**, confirming the compatibility of the 3D atomic model with its 1D amino acid sequence.
+* **ERRAT:** Achieved an overall quality factor of **84.67**, indicating a high-confidence distribution of non-bonded atomic interactions.
+* **Ramachandran Plot:** Analysis via **PROCHECK** confirmed a stereochemically sound structure, with the vast majority of residues located in the favored and allowed regions, ensuring proper backbone geometry.
+* **WHATCHECK:** Summary reports indicated a reliable model with normalized stereochemical parameters suitable for allosteric site identification.
+
+
+### 6. Binding Site Identification (SiteMap)
 * **Tool:** Schrödinger (SiteMap)
 * **Action:** An extensive search for potential binding pockets was conducted to identify an allosteric site. 
 * **Findings:** 10 potential pockets were identified.
