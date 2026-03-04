@@ -46,13 +46,13 @@ The workflow of this project was executed using a combination of bioinformatics 
 * **MOE - Molecular Operating Environment** (Structure Preparation & Protonate 3D)
 
 **Action:**
-The AlphaFold-generated model of TPO was subjected to a rigorous refinement protocol to resolve initial structural inconsistencies. Preliminary preparation was conducted using **Schrödinger’s Protein Preparation Wizard** to assign bond orders and optimize the H-bond network. To ensure physiological relevance, the model was migrated to **MOE** for **Protonate 3D** analysis (pH 7.0, 300K). A final **Energy Minimization** was performed using the **Amber14:EHT Force Field** with an RMS gradient of 0.1 kcal/mol/Å². This process successfully eliminated atomic clashes and corrected hybridization errors, stabilizing the protein for downstream analysis.
+The AlphaFold-generated model of TPO was subjected to a rigorous refinement protocol to resolve initial structural inconsistencies. Preliminary preparation was conducted using **Schrödinger’s Protein Preparation Wizard** to assign bond orders and optimize the H-bond network. To ensure physiological relevance, the model was migrated to **MOE** for **Protonate 3D** analysis (pH 7.0, 300K). A final **Energy Minimization** was performed using the **Amber:EHT Force Field**. To achieve optimal structural relaxation, this step was evaluated iteratively using two different RMS gradients (**0.1** and a more stringent **0.01** kcal/mol/Å²). This process successfully eliminated atomic clashes, corrected hybridization errors, and stabilized the protein for downstream analysis.
 
 ### 5. Structural Validation Outcomes
-To ensure the reliability of the refined TPO model, multiple validation servers were utilized via the **SAVES v6.0** platform. The outcomes confirmed a high-quality, stereochemically stable structure:
+To ensure the reliability of the refined TPO model, multiple validation servers were utilized via the **SAVES v6.0** platform. A comparative evaluation of the minimized models revealed that the structure minimized with the stricter **0.01 RMS gradient** yielded superior stereochemical stability and improved non-bonded interactions. Therefore, it was selected as the final model. The outcomes for this chosen model confirmed its high quality:
 
-* **Verify3D:** Successfully improved from **78.46% (Fail)** to **80.26% (Pass)**, confirming the compatibility of the 3D atomic model with its 1D amino acid sequence.
-* **ERRAT:** Achieved an overall quality factor of **84.67**, indicating a high-confidence distribution of non-bonded atomic interactions.
+* **Verify3D:** Successfully improved to **80.39% (Pass)**, confirming the robust compatibility of the 3D atomic model with its 1D amino acid sequence.
+* **ERRAT:** Achieved an outstanding overall quality factor of **87.21** (improved from 84.67), indicating a highly confident distribution of non-bonded atomic interactions.
 * **Ramachandran Plot:** Analysis via **PROCHECK** confirmed a stereochemically sound structure, with the vast majority of residues located in the favored and allowed regions, ensuring proper backbone geometry.
 * **WHATCHECK:** Summary reports indicated a reliable model with normalized stereochemical parameters suitable for allosteric site identification.
 
