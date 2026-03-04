@@ -10,7 +10,7 @@ This project aims to computationally model the 3D structure of mature TPO, analy
 
 The workflow of this project was executed using a combination of bioinformatics tools and molecular modeling software:
 
-### 1. Sequence Analysis & Signal Peptide Cleavage
+## 1. Sequence Analysis & Signal Peptide Cleavage
 * **Tool:** SignalP (version used, e.g., 6.0)
 * **Action:** The raw amino acid sequence of TPO was analyzed to identify and remove the secretory signal peptide, mimicking the physiological maturation process of the enzyme.
 * **Results:** 
@@ -21,7 +21,7 @@ The workflow of this project was executed using a combination of bioinformatics 
 
 ![signal peptide plot](https://github.com/abdulaziz-khaled/Structural-Modeling-and-Allosteric-Site-Identification-of-Thyroid-Peroxidase-TPO-/blob/main/%D9%84%D9%82%D8%B7%D8%A9%20%D8%B4%D8%A7%D8%B4%D8%A9%202026-02-27%20211856.png)
 
-### 2. Transmembrane Topology Prediction
+## 2. Transmembrane Topology Prediction
 * **Tool:** DeepTMHMM
 * **Action:** To understand the spatial orientation and functional regions of the mature TPO enzyme, a comprehensive transmembrane topology prediction was performed. This step is crucial for accurate 3D modeling and ensuring that pocket identification targets the correct physiological domains.
 * **Results:** The analysis of the mature TPO sequence revealed a classic single-pass transmembrane architecture, distributed as follows:
@@ -33,7 +33,7 @@ The workflow of this project was executed using a combination of bioinformatics 
 ![plot](https://github.com/abdulaziz-khaled/Structural-Modeling-and-Allosteric-Site-Identification-of-Thyroid-Peroxidase-TPO-/blob/main/%D9%84%D9%82%D8%B7%D8%A9%20%D8%B4%D8%A7%D8%B4%D8%A9%202026-02-27%20213121.png)
 ![predict](https://github.com/abdulaziz-khaled/Structural-Modeling-and-Allosteric-Site-Identification-of-Thyroid-Peroxidase-TPO-/blob/main/%D9%84%D9%82%D8%B7%D8%A9%20%D8%B4%D8%A7%D8%B4%D8%A9%202026-02-27%20213138.png)
 
-### 3. 3D Structure Generation
+## 3. 3D Structure Generation
 * **Tool:** AlphaFold 
 * **Action:** Due to the lack of a full PDB structure, a high-confidence 3D model of the mature TPO was generated utilizing AlphaFold's deep learning predictive capabilities.
 
@@ -57,7 +57,7 @@ To ensure the reliability of the refined TPO model, multiple validation servers 
 * **WHATCHECK:** Summary reports indicated a reliable model with normalized stereochemical parameters suitable for allosteric site identification.
 
 
-### 6. Binding Site Identification (SiteMap)
+## 6. Binding Site Identification (SiteMap)
 * **Tool:** Schrödinger (SiteMap)
 * **Action:** An extensive search for potential binding pockets was conducted to identify an allosteric site. 
 * **Findings:** 10 potential pockets were identified.
@@ -73,6 +73,6 @@ To ensure the reliability of the refined TPO model, multiple validation servers 
 * Schrödinger Suite (Protein Preparation Wizard, SiteMap)
 
 ## 🚀 Future Work
-* selection Allosteric Site.
+* Selection Allosteric Site.
 * Perform virtual screening (Molecular Docking) NAMs the identified allosteric pocket.
 * Conduct Molecular Dynamics (MD) simulations to validate the stability of the protein-ligand complexes.
