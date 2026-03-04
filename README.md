@@ -63,6 +63,8 @@ To ensure the reliability of the refined TPO model, multiple validation servers 
 
 
 ### 6. Targeted Structural Refinement and Visualization
+Via `SAVES Server` and `PyMol` 
+
 * Following the initial structural validation, localized geometric deviations—identified as unstable regions in the ERRAT plot—required further optimization. Using the Molecular Operating Environment (MOE) software, these specific problematic loops and individual amino acid residues were manually selected for targeted energy minimization. By applying the AMBER:EHT force field exclusively to these selected regions while keeping the rest of the protein fixed, steric clashes were successfully resolved, and local geometries were optimized without disrupting the overall stable backbone fold.
 
 `energy mini tpo moe .pdb`
