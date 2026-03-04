@@ -77,10 +77,10 @@ To ensure the reliability of the refined TPO model, multiple validation servers 
 * SignalP
 * DeepTMHMM
 * AlphaFold
-* PyMol
-* Schrödinger Suite (Protein Preparation Wizard, SiteMap)
-* MOE - Molecular Operating Environment (Structure Preparation & Protonate 3D)
+* Schrödinger Suite (Protein Preparation Wizard)
+* MOE - Molecular Operating Environment (Structure Preparation, Protonate 3D, Energy Minimization)
 * SAVES Server 
+* PyMol
 
 ## 🚀 Future Work
 * Selection Allosteric Site.
