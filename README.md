@@ -110,7 +110,7 @@ set orthoscopic, on
 png Protein_Logo_HighRes.png, width=3000, height=3000, dpi=300, ray=1
 ```
 
-`tpo prep PyMol.pdb`
+
 
 ### 7. Allosteric Site Identification
 
