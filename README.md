@@ -43,7 +43,7 @@ The workflow of this project was executed using a combination of bioinformatics 
 ### 4. Protein Preparation & Energy Minimization
 **Tools:**
 * **Schrödinger Suite** (Protein Preparation Wizard)
-* **MOE - Molecular Operating Environment** (Structure Preparation & Protonate 3D)
+* **MOE - Molecular Operating Environment** (Structure Preparation, Protonate 3D, Energy Minimization)
 
 **Action:**
 The AlphaFold-generated model of TPO was subjected to a rigorous refinement protocol to resolve initial structural inconsistencies. Preliminary preparation was conducted using **Schrödinger’s Protein Preparation Wizard** to assign bond orders and optimize the H-bond network. To ensure physiological relevance, the model was migrated to **MOE** for **Protonate 3D** analysis (pH 7.0, 300K). A final **Energy Minimization** was performed using the **Amber:EHT Force Field**. To achieve optimal structural relaxation, this step was evaluated iteratively using two different RMS gradients (**0.1** and a more stringent **0.01** kcal/mol/Å²). This process successfully eliminated atomic clashes, corrected hybridization errors, and stabilized the protein for downstream analysis.
