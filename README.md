@@ -109,6 +109,9 @@ set orthoscopic, on
 # 6. Render and save at 3000x3000 pixel high resolution (takes a few seconds)
 png Protein_Logo_HighRes.png, width=3000, height=3000, dpi=300, ray=1
 ```
+
+`tpo prep PyMol.pdb`
+
 ![image](https://github.com/abdulaziz-khaled/Structure-Based-Protein-Design-and-Allosteric-Site-Identification-of-Thyroid-Peroxidase-TPO/blob/main/pymol%20png.png)
 
 
